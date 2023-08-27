@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        /*
+        Código              Produto             Preço Unitário(R$)
+
+        100                 Cachorro Quente     R$10,90
+        101                 Misto Quente        R$8,90
+        102                 X-Salada            R$14,90
+        103                 X-Burguer           R$13,90
+        104                 X-Egg               R$16,90
+        105                 X-Bagunça           R$22,90
+        106                 Refrigerante        R$4,90
+        
+        Escreva um programa em JavaScript que leia o código do item adquirido pelo cliente e a quantidade, calculando e mostrando o valor a pagar. Não será necessário exibir o produto e o valor, somente o valor final. Use as estruturas de repetição e quando digitar 0 finalizar o programa com a somatória dos pedidos.
+        Após finalizar me chamem e enviem os HTMLs para luiz.almeida@docente,pr.senac.br 
+        
+        "A repetição é a mãe das habilidades"
+        */
+
+        //Primeiro preciso criar um indice com os códigos
+
+        var indice = 1;
+        var codigoDigitado;
+        var cachorro = 100
+        var mistoquente = 101
+        var xsalada = 102
+        var xburguer = 103
+        var xegg = 104
+        var xbagunca = 105
+        var refrigerante = 106
+        var finalizar = 0
+
+        // Variaveis em dinheiros R$
+        var cachorroPreco = 10.90
+        var mistoquentePreco = 9.90
+        var xsaladaPreco = 14.90
+        var xburguerPreco = 13.90
+        var xeggPreco = 16.90
+        var xbaguncaPreco = 22.90
+        var refrigerantePreco = 4.90
+
+        while (indice > 0) {
+            codigoDigitado = parseInt(prompt("Digite os códigos dos produtos a serem consumidos: \n 100 Cachorro Quente \n 101 Misto Quente \n 102 X-Salada \n 103 X-Burguer \n 104 X-Egg \n 105 X-Bagunça \n 106 Refrigerante \n 0 ZERO Para finalizar o pedido" + indice));
+            indice = indice +1;
+
+            if (indice = 0) {
+            cachorroPreco 
+
+            }
+            if (codigoDigitado = 100) {
+                cachorroPreco
+
+            } else {
+                codigoDigitado = 101
+                mistoquentePreco
+            }
+            if (codigoDigitado = 102) {
+                xsaladaPreco
+
+            } else {
+                codigoDigitado = 103
+                xburguerPreco
+            }
+            if (codigoDigitado = 104) {
+                xeggPreco
+
+            } else {
+                codigoDigitado = 105
+                xbaguncaPreco
+            }
+            if (codigoDigitado = 106) {
+                refrigerantePreco
+            } else {
+                //Finalizar a somatória dos pedidos
+                finalizar = (codigoDigitado)
+            }
+            
+        }
+
+
+        document.write("O valor total dos pedido foi dê: " + "R$" + finalizar)
+
+    </script>
+</body>
+
+</html>

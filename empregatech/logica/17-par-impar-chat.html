@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Bing teste</title>
+</head>
+<body>
+    <script>
+
+        // Pedir ao usuário que escolha entre 1 e 2
+var escolha = prompt("Escolha entre 1 e 2:");
+
+// Converter a escolha em um número
+escolha = Number(escolha);
+
+// Verificar se a escolha é válida
+if (escolha !== 1 && escolha !== 2) {
+  alert("Escolha inválida!");
+} else {
+  // Se a escolha for 1, imprimir números ímpares de 1 até 499
+  if (escolha === 1) {
+    for (var i = 1; i < 500; i += 2) {
+      document.write(i + "<br>");
+    }
+  }
+  // Se a escolha for 2, imprimir números pares de 0 até 500
+  else if (escolha === 2) {
+    for (var i = 0; i <= 500; i += 2) {
+      document.write(i + "<br>");
+    }
+  }
+}
+
+    </script>
+</body>
+</html>

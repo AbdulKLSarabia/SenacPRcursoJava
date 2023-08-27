@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let codigo = 1;
+        let total = 0;
+        let produtos = [];
+        let quantidades = [];
+        let valores = [];
+
+        while (codigo !== 0) {
+            codigo = parseInt(prompt("Digite os códigos dos produtos a serem consumidos: \n 100 - Cachorro Quente \n 101 - Misto Quente \n 102 - X-Salada \n 103 - X-Burguer \n 104 - X-Egg \n 105 - X-Bagunça \n 106 - Refrigerante \n 0 ZERO Para finalizar o pedido"));
+            let quantidade = parseInt(prompt("Digite a quantidade deste item: "));
+
+            switch (codigo) {
+                case 100:
+                    valores.push(10.9);
+                    total += quantidade * valores[valores.length - 1];
+                    produtos.push("Cachorro Quente");
+                    quantidades.push(quantidade);
+                    break;
+                case 101:
+                    valores.push(8.9);
+                    total += quantidade * valores[valores.length - 1];
+                    produtos.push("Misto Quente");
+                    quantidades.push(quantidade);
+                    break;
+                case 102:
+                    valores.push(14.9);
+                    total += quantidade * valores[valores.length - 1];
+                    produtos.push("X-Salada");
+                    quantidades.push(quantidade);
+                    break;
+                case 103:
+                    valores.push(13.9);
+                    total += quantidade * valores[valores.length - 1];
+                    produtos.push("X-Burguer");
+                    quantidades.push(quantidade);
+                    break;
+                case 104:
+                    valores.push(16.9);
+                    total += quantidade * valores[valores.length - 1];
+                    produtos.push("X-Egg");
+                    quantidades.push(quantidade);
+                    break;
+                case 105:
+                    valores.push(22.9);
+                    total += quantidade * valores[valores.length - 1];
+                    produtos.push("X-Bagunça");
+                    quantidades.push(quantidade);
+                    break;
+                case 106:
+                    valores.push(4.9);
+                    total += quantidade * valores[valores.length - 1];
+                    produtos.push("Refrigerante");
+                    quantidades.push(quantidade);
+                    break;
+
+                case 0:
+                    break;
+                default:
+                    alert("Código inválido!");
+            }
+        }
+
+        document.write(`O valor total a pagar é R$ ${total.toFixed(2)}.<br><br>`);
+        document.write(`Produtos adquiridos:<br>`);
+        for (let i = 0; i < produtos.length; i++) {
+            document.write(`${produtos[i]}: ${quantidades[i]} x R$ ${valores[i].toFixed(2)} = R$ ${(quantidades[i] * valores[i]).toFixed(2)}<br>`);
+        }
+    </script>
+</body>
+
+</html>

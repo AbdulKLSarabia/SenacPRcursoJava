@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Digite os códigos dos produtos a serem consumidos:
+         100 - Cachorro Quente 
+         101 - Misto Quente \n 102 - X-Salada \n 103 - X-Burguer \n 104 - X-Egg \n 105 - X-Bagunça \n 106 - Refrigerante \n 0 ZERO Para finalizar o pedido</h1>
+    <button onclick="tabelaLanche">Mostrar calculadora de lanches</button>
+    <div id="saida"></div>
+    <script>
+        /*
+               Código              Produto             Preço Unitário(R$)
+       
+               100                 Cachorro Quente     R$10,90
+               101                 Misto Quente        R$8,90
+               102                 X-Salada            R$14,90
+               103                 X-Burguer           R$13,90
+               104                 X-Egg               R$16,90
+               105                 X-Bagunça           R$22,90
+               106                 Refrigerante        R$4,90
+               
+               Escreva um programa em JavaScript que leia o código do item adquirido pelo cliente e a quantidade, calculando e mostrando o valor a pagar. Não será necessário exibir o produto e o valor, somente o valor final. Use as estruturas de repetição e quando digitar 0 finalizar o programa com a somatória dos pedidos.
+               Após finalizar me chamem e enviem os HTMLs para luiz.almeida@docente,pr.senac.br 
+               
+               "A repetição é a mãe das habilidades"
+               */
+
+               function tabelaLanche(){
+                var saida = document.querySelector("#saida");
+                var mensagem = "";
+               
+        // Primeiro preciso criar a variavel com os códigos e total
+        var codigo = 1;
+        var total = 0;
+
+        // Estrutura while para fazer o "ENQUANTO"
+    
+        while (codigo !== 0) {
+            codigo = parseInt(prompt("Digite os códigos dos produtos a serem consumidos: \n 100 - Cachorro Quente \n 101 - Misto Quente \n 102 - X-Salada \n 103 - X-Burguer \n 104 - X-Egg \n 105 - X-Bagunça \n 106 - Refrigerante \n 0 ZERO Para finalizar o pedido"));
+            var quantidade = parseInt(prompt("Digite a quantidade deste item: "));
+            // Estrutura de SWITCH para pegar o código e quantia do produto e multiplicar pelo valor.
+            switch (codigo) {
+                case 100:
+                    total += quantidade * 10.9;
+                    break;
+                case 101:
+                    total += quantidade * 8.9;
+                    break;
+                case 102:
+                    total += quantidade * 14.9;
+                    break;
+                case 103:
+                    total += quantidade * 13.9;
+                    break;
+                case 104:
+                    total += quantidade * 16.9;
+                    break;
+                case 105:
+                    total += quantidade * 22.9;
+                    break;
+                case 106:
+                    total += quantidade * 4.9;
+                    break;
+            // Não consegui fazer ainda uma forma melhor para interromper com o 0 zero, sendo necessário clicar 2x para finalizar e exibir o total.
+                case 0:
+                    break;
+                default:
+                    alert("Código inválido!");
+            }
+        }
+        saida.innerHTML = mensagem;
+        document.write("O valor total a pagar é R$" + total);
+    }
+    </script>
+</body>
+
+</html>

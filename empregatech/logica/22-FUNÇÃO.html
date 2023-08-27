@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função</title>
+</head>
+
+<body>
+    <h1>Calculadora</h1>
+    <button onclick="nMais()">Somar</button>
+    <button onclick="nMenos()">Subtrair</button>
+    <button onclick="nMultiplica ()">Multiplicar</button>
+    <button onclick="nDivide()">Dividir</button> 
+    <button onclick="Limpar()">Limpar</button>
+    <div id="saida"></div>
+
+    <script>
+
+        /*  Criar botão + - * /
+        1º Pedir um número
+        2º Clicar no botão
+        3º Pedir outro Nº
+        4º Mostrar resultados */
+        var mensagem = "";
+        var numero = parseInt(prompt("Digite o número a ser calculado"));
+        var saida = document.querySelector("#saida"); 
+        mensagem = numero
+        saida.innerHTML = mensagem;
+        //document.write (numero + "<br>")
+
+        function nMais() {
+            var numero2 = parseInt(prompt("Digite o número a ser calculado <br>" ));
+            numero = numero + numero2;
+            mensagem = `${numero} <br>`
+            saida.innerHTML = mensagem;
+            
+        }
+            
+            function nMenos(){
+          
+            var numero2 = parseInt(prompt("Digite o número a ser calculado <br>" ));
+            numero = numero - numero2;
+            mensagem = `${numero} <br>`
+            
+           
+            saida.innerHTML = mensagem;
+        } 
+
+         function nMultiplica(){
+            var numero2 = parseInt(prompt("Digite o número a ser calculado <br>" ));
+            numero = numero * numero2;
+            mensagem = `${numero} <br>`
+            
+           
+            saida.innerHTML = mensagem;
+         }
+ 
+         function nDivide (){
+            var numero2 = parseInt(prompt("Digite o número a ser calculado <br>" ));
+            numero = numero / numero2;
+            mensagem = `${numero} <br>`
+            
+           
+            saida.innerHTML = mensagem;
+         } 
+
+         function Limpar(){
+            var saida = document.querySelector("#saida");
+            var mensagem = "";
+            saida.innerHTML = mensagem;
+            
+           
+            
+         }
+    </script>
+</body>
+
+</html>

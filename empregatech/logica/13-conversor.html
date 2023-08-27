@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* Fazer um programa que abre um alert perguntando o seguinte:
+        Digite 1 para calcular Celsius >> Farenheit
+        Digite 2 para calcular de Farenheit >> Celsius
+        Perguntar a temperatura:
+        Trazer o resultado convertido */
+
+        /* Celsius == (32 * 9/5) + 32 
+        Farenheit == (32 - 32) * 5/9  */
+        var numero = parseInt(prompt("Digite 1 para calcular Celsius para Farenheit: \n Digite 2 para calcular de Farenheit para Celsius "))
+
+        switch (numero) {
+            case 1:
+                var temperatura = parseFloat(prompt("Digite sua temperatura em Celsius "));
+                var calc0 = (temperatura * 9 / 5) + 32;
+                alert("A temperatura de: " + temperatura + "Cº para é: " + calc0 + " Fº")
+
+                break;
+            case 2:
+                var temperatura = parseFloat(prompt("Digite sua temperatura em Farenheit "))
+                var calc1 = (temperatura - 32) * 5 / 9
+                alert("A temperatura de: " + temperatura + " Fº para é : " + calc1 + " Cº")
+                
+                break;
+        }
+    </script>
+</body>
+
+</html>
+
+
+<!-- 
+    var numero = parseInt(prompt("Digite um número: \n 1 - Converte Celsius para Farenheit \n2 - Converte Farenheit para Celsius"));
+    switch(numero){
+        case 1:
+            var temperatura = parseFloat(prompt("Digite sua temperatura em Celsius"));
+            var tempConvertida = (temperatura * 9/5) + 32;
+            alert("A temperatura de " + temperatura + "C para Farenjeit é: " + tempConvertida + "F" );
+            break;
+    }
+-->

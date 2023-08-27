@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções</title>
+
+    <button onclick="Maior('+')">Maior</button>
+    <button onclick="Menor('-')">Menor</button>
+</head>
+
+<body>
+    <h1>Funções que recebem 3 números e identifica maior e menor</h1>
+    <script>
+        /*  Programe um sistema que receba 3 números e identifica o maior através 
+ de um função e o menor através de outra função. 
+ "A repetição é a mãe da habilidade"*/
+
+
+        function Maior(maior) {
+            var n1 = parseFloat(prompt("Digite o primeiro número"))
+            var n2 = parseFloat(prompt("Digite o segundo número"))
+            var n3 = parseFloat(prompt("Digite o terceiro número"))
+           
+            return Math.max(n1, n2, n3);
+            alert("O número maior foi :" + Math.max)
+        }
+
+        function Menor(menor) {
+            var n1 = parseFloat(prompt("Digite o primeiro número"))
+            var n2 = parseFloat(prompt("Digite o segundo número"))
+            var n3 = parseFloat(prompt("Digite o terceiro número"))
+            switch (menor) {
+                case '-':
+                    if (n1 < n2 || n3) {
+                        alert("Primeiro número foi o menor");
+                    } else if (n2 < n1 || n3) {
+                        alert("Segundo número foi o menor");
+                    } else if (n3 < n1 || n2) {
+                        alert("Terceiro número foi o menor");
+                    }
+
+            }
+        }
+    </script>
+</body>
+
+</html>

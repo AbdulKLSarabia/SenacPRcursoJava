@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="calcularArea('+')">+</button>
+    <button onclick="calcularArea('-')">-</button>
+    <button onclick="calcularArea('*')">*</button>
+    <button onclick="calcularArea('/')">/</button>
+
+    <div id="saida"> </div>
+
+    <script>
+
+        // Mini2 criar apenas uma função, posso usar SWITCH
+
+        //pedir um número
+        let n = parseFloat(prompt("Digite o valor inicial"));
+        let cont = 0; //definir uma variável auxiliar para os calculos
+        let saida = document.querySelector("#saida"); //definir a variável para dar a saída
+
+        saida.innerHTML = n; // Insere em saida o valor "N"
+        
+        // Criando minha função de soma
+        function calcularArea(caractere) {
+            cont = parseFloat(prompt("Digite o valor inicial"));
+
+            switch (caractere) {
+                case '+':
+                    n += cont;
+                    saida.innerHTML = n;
+                    break;
+
+                case '-':
+                    n -= cont;
+                    saida.innerHTML = n;
+                    break;
+
+                case '*':
+                    n *= cont;
+                    saida.innerHTML = n;
+                    break;
+
+                case '/':
+                    n /= cont;
+                    saida.innerHTML = n;
+                    break;
+
+                default:
+                    alert("Invalido")
+            }
+        }
+
+    </script>
+</body>
+
+</html>

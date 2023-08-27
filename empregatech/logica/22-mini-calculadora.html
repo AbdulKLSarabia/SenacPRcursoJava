@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="somar()">+</button>
+    <button onclick="subtrair()">-</button>
+    <button onclick="multiplicar()">X</button>
+    <button onclick="dividir()">/</button>
+    <div id="saida"> </div>
+    <script>
+
+        //pedir um número
+        let n = parseFloat(prompt("Digite o valor inicial"));
+        let cont = 0; //definir uma variável auxiliar para os calculos
+        let saida = document.querySelector("#saida"); //definir a variável para dar a saída
+
+        saida.innerHTML = n; // Insere em saida o valor "N"
+
+        // Criando minha função de soma
+        function somar(){
+            // Pedir um número para somar com o "N"
+            cont = parseFloat(prompt("Digite um número para somar"));
+           // n = n + cont;
+            n += cont;
+            saida.innerHTML = n;
+        }
+
+        function subtrair(){
+            // Pedir um número para somar com o "N"
+            cont = parseFloat(prompt("Digite um número para somar"));
+           // n = n + cont;
+            n -= cont;
+            saida.innerHTML = n;
+        }
+        function multiplicar(){
+            // Pedir um número para somar com o "N"
+            cont = parseFloat(prompt("Digite um número para somar"));
+           // n = n + cont;
+            n *= cont;
+            saida.innerHTML = n;
+        }
+        function dividir(){
+            // Pedir um número para somar com o "N"
+            cont = parseFloat(prompt("Digite um número para somar"));
+           // n = n + cont;
+            n /= cont;
+            saida.innerHTML = n;
+        }
+    </script>
+</body>
+</html>

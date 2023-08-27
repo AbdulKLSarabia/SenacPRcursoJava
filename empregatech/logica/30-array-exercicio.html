@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <h1>Usando Arrays</h1>    
+    <script>
+        var arr = new Array(5, 30, 22, 27, 9, 0, 31, 72);
+
+        var somaPar = 0;
+        
+        for (var i = 0; i < arr.length; i++){
+           if(arr[i] % 2 == 0) {
+            somaPar += arr[i];
+
+           }
+        }
+        alert("A soma dos números pares é: " + somaPar);
+    </script>
+</body>
+</html>
+
+<!-- somaPar[i] + arr(i++) + "<br>"; -->

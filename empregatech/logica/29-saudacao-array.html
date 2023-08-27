@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<>, initial-scale=1.0">
+    <title>Atividade Saudação</title>
+</head>
+<body>
+    <script>
+
+        var dias = new Array("Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado");
+        var hoje = new Date(); // Objeto date trás informaões de data e armazena em hoje
+
+        var diaSemana = hoje.getDay(); // Metodo getDay captura o dia semana de hoje. Exemplo: vai me trazer valores de o a 6 (0-Domingo ... 6-Sábado
+        
+        alert("Bem-vindo, hoje é " + dias[diaSemana]);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções recebem parâmetros</title>
+</head>
+
+<body>
+    <h1>Funções que recebem parâmetros e funções que retornam valor</h1>
+
+    <button onclick="calcularAreaAlert()">Calcular a área do retângulo - ALERT</button>
+    <button onclick="calcularAreaSaida()">Calcular a área do retângulo - DIV Saída</button>
+
+    <div id="saida"></div>
+
+    <script>
+        // Pedir a largura e altura do retângulo
+
+
+
+        // Esta função serve para mostrar o cálculo no Alert
+        function calcularAreaAlert() {
+            // A variável area recebe o valor de uma outra função
+            var largura = parseFloat(prompt("Digite a largura do retângulo"));
+            var altura = parseFloat(prompt("Digite a altura do retângulo"));
+            var area = calcularArea(largura, altura);
+            alert("O valor e área é: " + area);
+        }
+
+        // Esta função serve para mostrar o cálculo na DIV saída
+        function calcularAreaSaida() {
+            var largura = parseFloat(prompt("Digite a largura do retângulo"));
+            var altura = parseFloat(prompt("Digite a altura do retângulo"));
+            var area = calcularArea(largura, altura);
+            document.querySelector("#saida").innerHTML = "O valor da área é: " + area;
+        }
+
+        function calcularArea(largura, altura) {
+            // Pedir a largura e altura do retângulo
+            return largura * altura;
+
+        }
+
+    </script>
+</body>
+
+</html>

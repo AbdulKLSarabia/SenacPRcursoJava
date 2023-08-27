@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média três notas</title>
+</head>
+<body>
+    <h1>Média 3 notas</h1>
+
+    <script>
+            var nota1, nota2, nota3, ftri1, ftri2, ftri3, mediaN, mediaF
+            //Pedir para o usuário digitar 3 notas(trimestre)
+        nota1 = parseFloat(prompt("Digite a nota 1"))
+        nota2 = parseFloat(prompt("Digite a nota 2"))
+        nota3 = parseFloat(prompt("Digite a nota 3"))
+            
+            //Pedir para o usuário digitar faltas de cada(trimestre)
+        ftri1 = parseFloat(prompt("Digite faltas do primeiro trimestre em horas"))
+        ftri2 = parseFloat(prompt("Digite faltas do segundo trimestre em horas"))
+        ftri3 = parseFloat(prompt("Digite faltas do terceiro trimestre em horas"))
+
+            //Variáveis de média e soma
+        mediaN = (nota1 + nota2 + nota3) /3
+        mediaF = ftri1 + ftri2 + ftri3
+            
+            //A disciplina tem 80h totais no ano, máximo de falta 25% = 20h
+
+            //Média para aprovação >= 7 E faltas <= 25%
+        if (mediaN >= 7 && mediaF <= 20){
+            alert("Você foi aprovado com a média de " + mediaN)
+            //Exame média < 7 E >= 4 E faltas <= 25%
+        }else
+            if(mediaN >=4 && mediaF <= 20){
+            alert("Você precisa fazer um exame de recuperação")
+            
+        //Reprovado caso Média < 4 OU faltas > 25%
+        }else{
+            alert("Você foi reprovado")
+        }
+        
+        
+        
+        
+
+        
+        //O programa deve mostrar uma mensagem informando se foi aprovado, reprovado ou exame.
+        /*
+        Testes
+todas notas 7 e dentro do limite de faltas = "Você foi aprovado com a média de 7"
+
+Teste média 7 e excesso de faltas = "Você foi reprovado"
+
+Teste média 4 e dentro do limite de faltas = "Você precisa fazer um exame de recuperação"
+
+Teste média 4 e excesso de faltas = "Você foi reprovado"
+
+Teste média abaixo de 4 com 0 faltas = "Você foi reprovado"
+
+Teste de float média 4.1 e 0 faltas = "Você precisa fazer um exame de recuperação"
+
+Teste de float média 3.9 e 0 faltas = "Você foi reprovado"
+
+    */
+        
+    </script>
+</body>
+</html>

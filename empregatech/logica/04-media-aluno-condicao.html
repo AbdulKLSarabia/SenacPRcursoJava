@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media de notas do aluno.</title>
+</head>
+<body>
+     
+    
+    <script>
+        var num1, num2, num3, media
+        
+        num1 = prompt("Digite a primeira nota");
+        num2 = prompt("Digite a segunda nota");
+        num3 = prompt("Digite a terceira nota");
+
+        num1 = parseFloat(num1);
+        num2 = parseFloat(num2);
+        num3 = parseFloat(num3);
+
+        media = (num1 + num2 + num3) / 3;
+
+        //Booleano 
+        
+        //alert("A média do aluno foi: " + media); dentro do alert não consegui inserir o resultado ainda e executei usando o document.write
+        document.write("<h1>A media do aluno foi de:</h1>")
+        document.write(media)
+        //alert(`A média final do aluno é: ${media}`); //template string
+        //Se aluno não tirou mais que 90 está reprovado
+        alert("O aluno conseguiu passar? " + (media>=90));
+
+        //Estrutura condicional
+
+        if(media >= 90){
+            alert("Parabéns você foi aprovado com a média de " + media);
+            //O alert acima será mostrado caso a média do aluno seja maior ou igual a 70
+        } else {
+            alert("Infelizmente você foi reprovado com a média de " + media);
+        }
+
+    </script>
+</body>
+</html>

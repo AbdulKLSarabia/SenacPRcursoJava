@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maior</title>
+    <h1>Qual o maior número digitado?</h1>
+    <button onclick="Maior()">Clique para inserir os números e descobrir o Maior</button>
+    <button onclick="Menor()">Clique para inserir os números e descobrir o Menor</button>
+</head>
+
+<body>
+    <script>
+
+        function Maior() {
+            // Pedir a quantidade de números que serão digitados.
+            var numeros = parseInt(prompt("Digitar a quantidade de números que queira digitar"));
+            /* alert("Quantidade de números que queira digitar " + numeros)
+             */
+            // Loop para receber os números e testar se é maior
+            var nMaior = 0;
+            for (var cont = 1; cont <= numeros; cont++) {
+                var nNovo = parseInt(prompt("Digite o seu " + cont + "º Número"))
+                if (nNovo > nMaior) {
+                    nMaior = nNovo
+                }
+            }
+            alert("O maior número digitado é: " + nMaior)
+
+        }
+
+
+        function Menor() {
+            var numeros = parseInt(prompt("Digite a quantidade de números que queira digitar"));
+            var nMenor = 0;
+            for (var cont = 1; cont <= numeros; cont++) {
+                
+                var nNovo = parseInt(prompt("Digite o seu " + cont + "º Número")) 
+                if (nMenor == 0){
+                    nMenor = nNovo
+
+                }
+            }
+            alert("O menor número digitado é " + nMenor)
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var indice = 1;
+        var numeroDigitado;
+        var nPar = 0;
+        var nImpar = 0;
+
+        while (indice <= 5) {
+            numeroDigitado = parseFloat(prompt("Digite o " + indice + "º número"));
+            indice = indice + 1;
+
+            if (numeroDigitado % 2 == 0) {
+                nPar = nPar + numeroDigitado;
+
+            } else {
+                nImpar = nImpar + numeroDigitado;
+            }
+        }
+        var totalNumeros = nPar + nImpar;
+        var porcentagemPares = (nPar / totalNumeros) * 100;
+        var porcentagemImpares = (nImpar / totalNumeros) * 100;
+
+        document.write(" A soma dos pares é: " + nPar + "<br>");
+        document.write(" A soma dos ímpares é: " + nImpar + "<br>");
+        document.write(" A porcentagem de números pares é: " + porcentagemPares.toFixed(2) + "%<br>");
+        document.write(" A porcentagem de números ímpares é: " + porcentagemImpares.toFixed(2) + "%<br>");
+    </script>
+</body>
+
+</html>

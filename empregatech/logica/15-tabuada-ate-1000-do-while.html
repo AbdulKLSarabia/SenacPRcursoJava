@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada até 1000</title>
+</head>
+<body>
+    <script>
+        /* Tabuada que me trará resultados de 0 até 1000  */
+        var numero = parseFloat(prompt("Insira o número a ser cálculado"));
+
+        var indice = 1;
+        
+        //Criar um loop DO WHILE
+        
+        do{
+         document.write(numero + " X " + indice + " = " + numero*indice + "<br");
+         indice = indice + 1;
+         //indice++;
+        }while(indice <=1000);
+        
+
+        document.write(" Saiu do programa")
+    </script>
+</body>
+</html>

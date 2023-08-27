@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Função que verifica se um número é primo
+function isPrime(num) {
+  // Se o número for 2 ou 3, é primo
+  if (num === 2 || num === 3) {
+    return true;
+  }
+  // Se o número for par ou menor que 2, não é primo
+  if (num % 2 === 0 || num < 2) {
+    return false;
+  }
+  // Testar os divisores ímpares de 3 até a raiz quadrada do número
+  for (var i = 3; i <= Math.sqrt(num); i += 2) {
+    // Se o número for divisível por i, não é primo
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  // Se chegou até aqui, é primo
+  return true;
+}
+
+// Pedir ao usuário que escolha entre 1, 2 e 3
+var escolha = prompt("Escolha entre 1, 2 e 3:");
+
+// Converter a escolha em um número
+escolha = Number(escolha);
+
+// Verificar se a escolha é válida
+if (escolha !== 1 && escolha !== 2 && escolha !== 3) {
+  alert("Escolha inválida!");
+} else {
+  // Se a escolha for 1, imprimir números ímpares de 1 até 499
+  if (escolha === 1) {
+    for (var i = 1; i < 500; i += 2) {
+        document.write(i + "<br>");
+    }
+  }
+  // Se a escolha for 2, imprimir números pares de 0 até 500
+  else if (escolha === 2) {
+    for (var i = 0; i <= 500; i += 2) {
+      document.write(i + "<br>");
+    }
+  }
+   // Se a escolha for 3, imprimir números primos de 0 até n, onde n é fornecido pelo usuário
+   else if (escolha ===3){
+     // Pedir ao usuário que digite o valor de n
+     var n = prompt("Digite o valor de n:");
+     // Converter n em um número
+     n = Number(n);
+     // Verificar se n é válido
+     if (n <0){
+       alert("Valor inválido!");
+     } else {
+       // Percorrer os números de 0 até n
+       for (var i =0; i<=n; i++){
+         // Se o número for primo, imprimir
+         if(isPrime(i)){
+            document.write(i + "<br>");
+         }
+       }
+     }
+   }
+}
+    </script>
+</body>
+</html>

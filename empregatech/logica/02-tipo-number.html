@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformando String em Number</title>
+</head>
+<body>
+    
+    <h1>Somando, subtraindo, multiplicando e dividindo dois números digitados pelo usuário.</h1>
+
+    <script>
+        //comentário de uma linha
+        /* Comentário de
+        várias linhas
+        de comando */
+
+        //Declarar nossas variáveis
+        var num1, num2, soma, subtracao, multiplicacao, divisao
+        //var num2
+        //var soma
+        //var subtracao
+        //var multiplicacao
+        //var divisao
+
+        //Usuário digita o primeiro número
+        
+        num1 = prompt("Digite o seu primeiro número: ");
+        //Transformar string em number
+        num1 = parseFloat(num1);
+        //Usuário digita o segundo número
+        num2 = prompt("Digite o seu segundo número: ")     
+        //transformar string em number
+        num2 = parseFloat(num2);
+        
+        //Somar os dois números
+        soma = num1 + num2;
+        //Subtração -
+        subtracao = num1 - num2; 
+        //Multiplicação *
+        multiplicacao = num1 * num2;
+        //Divisão /
+        divisao = num1 / num2;
+
+        //Mostrar em um alert a soma dos números
+       // alert("A soma dos números é: " + soma); //concatenamos
+        alert("A soma de " + num1 + " + " + num2 + " é: " + soma);
+        alert("A subtração de " + num1 + " - " + num2 + " é : " + subtracao);
+        alert("A multiplicação de " + num1 + " * " + num2 + " é : " + multiplicacao);
+        alert("A divisão de " + num1 + " / " + num2 + " é : " + divisao);
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - Documento Object Model</title>
+</head>
+
+<body>
+    <h1>Manipulando objetos que estejam no mundo HTML</h1>
+    <!-- Criando botões para gerar a tabuada -->
+    <button onclick="gerarTabuada()">Gerar Tabuada</button>
+    <button onclick="limparTabuada()">Limpar Tabuada</button>
+    <div id="saida"></div>
+
+    <script>
+        
+        function gerarTabuada() {
+            var saida = document.querySelector("#saida");
+            var mensagem = "";
+            var nTabuada = parseInt(prompt("Digite o número para a tabuada"));
+             
+            
+            for (var i = 1; i <= 1000; i++) {
+                mensagem += nTabuada + " X " + i + " = " + (nTabuada * i) + "<br>";
+                
+            }
+            saida.innerHTML = mensagem;
+        }
+        
+        function limparTabuada(){
+            var saida = document.querySelector("#saida");
+            var mensagem = "";
+            saida.innerHTML = mensagem;
+         }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch - Exemplo 2</title>
+</head>
+
+<body>
+    <!--COMENTÁRIO HTML-->
+    <script>
+        //Pedir para o usuário digitar um nome
+        //Contar quantos caracteres
+        //Usar o switch para mostrar quantos caracteres tem o nome
+        /* SHIFT + ALT + A abre a tag comentário em vários linhas */
+        // CRTL + ; abre a tag comentário linha
+
+        //Usar o switch para mostrar até 5 caracteres tem o nome
+        //Um aviso de que o nome tem mais de 5 caracteres
+        var nome = prompt("Digite seu nome: ");
+        
+        var comprimento = nome.length;
+        console.log("Total de caracteres é " + comprimento);
+
+            switch (comprimento) {
+            case 1:
+                alert("O nome tem um total de 1 caracter ");
+                break;
+
+            case 2:
+                alert("O nome tem um total de 2 caracteres ");
+                break;
+
+            case 3:
+                alert("O nome tem um total de 3 caracteres ");
+                break;
+
+            case 4:
+                alert("O nome tem um total de 4 caracteres ");
+                break;
+
+            case 5:
+                alert("O nome tem um total de 5 caracteres ");
+                break;
+
+            default:
+                alert("Você deve digitar um nome com até 5 caracteres! ");
+
+        }
+    </script>
+</body>
+
+</html>

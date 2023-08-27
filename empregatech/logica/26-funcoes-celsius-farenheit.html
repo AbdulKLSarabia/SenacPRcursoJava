@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções que convertem Celsiu para Farenheit</title>
+</head>
+
+<body>
+    <h1>Funções que convertem Celsiu para Farenheit e Vise Versa</h1>
+    <button onclick="CelsiusFarenheit()">Celsiusº para Farenheitº</button>
+    <button onclick="FarenheitCelsius()">Farenheitº para Celsiusº</button>
+    <div id="saida"></div>
+
+    <script>
+
+
+        function CelsiusFarenheit() {
+            
+            var temperatura = parseFloat(prompt("Digite sua temperatura em Celsius "));
+           
+            var calc0 = (temperatura * 9 / 5) + 32;
+            alert("A temperatura de Celsius: " + temperatura + "Cº para Farenheit é: " + calc0 + " Fº")
+            
+            document.querySelector("#saida").innerHTML = "A temperatura de Celsius: " + temperatura + "Cº para Farenheit é: " + calc0 + " Fº"
+
+        }
+
+        function FarenheitCelsius() {
+            var temperatura = parseFloat(prompt("Digite sua temperatura em Celsius "));
+           
+            var calc1 = (temperatura - 32) * 5 / 9
+            alert("A temperatura de Farenheit: " + temperatura + "Fº para Celsius é : " + calc1 + " Cº");
+            
+            document.querySelector("#saida").innerHTML = "A temperatura de Farenheit: " + temperatura + "Fº para Celsius é : " + calc1 + " Cº"
+        }
+    </script>
+</body>
+
+</html>

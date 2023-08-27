@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostre soma</title>
+</head>
+
+<body>
+    <script>
+        /* Atividade 2 Faça um programa que receba 5 números. Mostre a soma dos números pares e a soma dos números ímpares. */
+        //Pedir para inserir números 5x
+
+        var indice = 1;
+        var numeroDigitado;
+        var nPar = 0;
+        var nImpar = 0;
+        var countPar = 0;
+        var countImpar = 0;
+
+        while (indice <= 5) {
+            numeroDigitado = parseInt(prompt("Digite o " + indice + "º número"));
+            indice = indice + 1;
+
+            if (numeroDigitado % 2 == 0) {
+                nPar = nPar + numeroDigitado;
+                countPar++;
+            } else {
+                nImpar = nImpar + numeroDigitado;
+                countImpar++;
+            }
+        }
+
+        document.write(" A soma dos pares é: " + nPar + "<br>");
+        document.write(" A soma dos ímpares é: " + nImpar + "<br>");
+
+        document.write("A porcentagem de par é: " + ((countPar / (countPar + countImpar)) * 100) + "%<br>");
+        document.write("A porcentagem de ímpar é: " + ((countImpar / (countPar + countImpar)) * 100) + "%<br>");
+
+    </script>
+
+</body>
+
+</html>

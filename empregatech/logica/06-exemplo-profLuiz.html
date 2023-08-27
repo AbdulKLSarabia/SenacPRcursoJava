@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Lógica</title>
+</head>
+<body>
+    <h1>Jogo Lógica</h1>
+    <script>
+        var nJogador1, nJogador2, nSorteado
+        //Pedir um número para o jogador1
+        nJogador1 = parseInt(prompt("Digite o seu número"));
+        //Pedir um número para o jogador2
+        nJogador2 = parseInt(prompt("Digite o seu número"));
+        //Se números forem iguais escrever empate "Empate"
+        if(nJogador1 == nJogador2){
+            alert("Deu empate! Jogador 1 digitou" + nJogador1 + "Jogador 2 digitou " + nJogador2);
+        }else{
+        //Se números diferentes sortear um número
+        nSorteado = parseInt(Math.random()*2);
+        alert("O número sorteado foi: " + nSorteado);
+        
+        //Se número sorteado = 0 vence jogador com menor número
+        if(nSorteado == 0){
+            if(nJogador1 < nJogador2){
+                alert("Jogador 1 venceu, escolhendo o menor número. ")
+            }else{
+                alert("Jogador 2 venceu, escolhendo o menor número")
+            }
+
+        }else{
+            if(nJogador1 > nJogador2){
+                alert("Jogador 1 venceu, escolhendo o maior número.")
+            }else{
+                alert("Jogador 2 venceu, escolhendo o maior número")
+            }
+        }
+
+        }
+        
+
+        //Se número sorteado = 1 vence o jogador com maior número
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha um número</title>
+</head>
+
+<body>
+    <script>
+
+        var player1, player2, random
+        //Fazer os jogadores digitarem um número
+        player1 = prompt("Escolha um número Player 1")
+        player2 = prompt("Escolha um número Player 2")
+
+        //Variável Math que vai gerar entre 0 e 1
+        random = parseInt(Math.random() * 2)
+        
+        // Se e talvez para saber se foi empate ou diferente
+        if (player1 == player2 ) {
+            alert("Empate")
+        } else {
+            alert("Diferente")
+        //Comparador para saber quem escolheu o maior ou menor número e qual a váriavel random gerou para determinar o vencedor.
+        if (random == 0 && player1 < player2 || (random == 1 && player1 > player2) ) {
+            alert("Player 1 Win")
+        } else {
+            alert("Player 2 win")
+        }
+    }
+       
+
+        document.write("O número aleatório entre 0 e 1 foi de : " + random)
+        
+    </script>
+
+</body>
+
+</html>
