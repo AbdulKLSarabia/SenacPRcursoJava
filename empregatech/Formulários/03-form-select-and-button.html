@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Formulário de cadastro</h3>
+
+    <form action="" method="get">
+        <label for="">Nome: </label><input type="text" name="name"><br><br>
+        <label for="">Idade: </label><input type="number" name="age"><br><br>
+        <label for="">Password: </label><input type="password" name="password"><br><br>
+
+        <!-- Select -->
+        <select name="cargo">
+            <option value="">Selecione o cargo</option>
+            <option value="administrativo">Administrativo</option>
+            <option value="gerente">Gerente</option>
+            <option value="diretor">Diretor</option>
+            <option value="presidente">Presidente</option>
+        </select><br><br>
+
+        <label for="">Assunto</label><input type="text" name="assunto"><br><br>
+        <label for="">Mensagem</label>
+        <textarea name="mensagem" id="" cols="3|0" rows="10"></textarea><br><br>
+
+        <!-- Tipos de Botões -->
+        <button type="submit">Tipo Submit</button><br><br>
+        <button type="button" onclick="alert('Cliquei em um button')">Tipo Button - Ser Clicável</button><br><br>
+        <button type="reset">Tipo Reset - Limpar Campos</button><br><br>
+        <button disabled="disabled">Você não tem permissão </button>
+    </form>
+</body>
+
+</html>
