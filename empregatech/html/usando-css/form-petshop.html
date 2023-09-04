@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetShop</title>
+    <h1>Formulário agenda de banho e tosa</h1>
+    <h2>Faça o seu agendamento com pelo menos 48h de antecedência</h2>
+
+</head>
+
+<body>
+    <!-- title="Identificação do responssável" -->
+    <form action="#" method="get" onsubmit="alert('Seus dados foram enviados')">
+        <fieldset>
+            <legend>Identificação do responssável</legend>
+            <label for="">Nome:</label>
+            <input type="text" name="" placeholder="Digite aqui seu nome">
+            
+            <br><br>
+            <label for="endereco">Endereço:</label>
+            <input type="text" placeholder="Digite aqui seu endereço">
+            <br><br>
+            <label for="cep">CEP:</label>
+            <input type="text" name="" placeholder="XXXXX-XXX">
+            <br><br>
+            <label for="email">E-mail:</label>
+            <input type="email" placeholder="Digite aqui seu E-mail">
+            <br><br>
+            <label for="tel">Telefone:</label>
+            <input type="tel" name="" placeholder="(XX)X.XXXX-XXXX">
+            <br>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Dados do pet</legend>
+            <label for="nomepet">Nome do Pet:</label>
+            <input type="nomepet" placeholder="Digite o nome do seu pet">
+            <br><br>
+            <label for="">Porte do cão:</label>
+            <input type="radio" name="opcional[]" value="pequeno"> Pequeno
+            <input type="radio" name="opcional[]" value="medio"> Médio
+            <input type="radio" name="opcional[]" value="grande"> Grande
+
+            <br><br>
+
+            <label for="tipotosa">Tipos de tosa:</label>
+            <select name="tosa">
+                <option value="">Nenhuma</option>
+                <option value="higi">Higiênica</option>
+                <option value="tesoura">Tosa na Tesoura</option>
+                <option value="maquina">Tosa na Máquina</option>
+                <option value="bebe">Tosa bebê</option>
+                <option value="raca">Tosa de Raça</option>
+                <option value="verao">Tosa Verão</option>
+            </select>
+
+            <br><br>
+
+            <label for="obs">Observações</label>
+            <textarea name="obs" cols="12" rows="2" placeholder="Digite alguma informação"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Horário - (Não atendemos ao domingo e segunda-feira)</legend>
+            <label for="semana">Indique os dias da semana de sua preferência:</label>
+            <br>
+            <input type="checkbox" name="">Terça-feira
+            <input type="checkbox" name="">Quarta-feira
+            <input type="checkbox" name="">Quinta-feira
+            <input type="checkbox" name="">Sexta-feira
+            <input type="checkbox" name="">Sábado
+
+            <br><br>
+            <label for="">Primeira opção de horário:</label>
+            <input type="date" name="" id="">
+            <br><br>
+
+            <label for="">Segunda opção de horário:</label>
+            <input type="date" name="" id="">
+            <br><br>
+
+        </fieldset>
+
+
+        
+        <button type="submit">Enviar</button>
+    </form>
+
+</body>
+
+</html>

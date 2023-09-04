@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .ajuda{
+            background-color: antiquewhite;
+            border: 1px solid gray;
+            font-size: 0.9em;
+            padding: 10px;
+            position: relative;
+            width: 300px;
+        }
+
+        .ajuda::before{
+            border-color: transparent gray transparent transparent;
+            border-style: solid;
+            border-width: 14px;
+            content: "";
+            left: -28px;
+            margin-top: -14px;
+            position: absolute;
+            top: 50%;
+        }
+    </style>
+
+</head>
+<body>
+    <p class="ajuda">
+        Preencha o campo com e-mail válido, assim poderemos entrar em contato com você para infomar o resultado do nosso concurso.
+    </p>
+    
+</body>
+</html>

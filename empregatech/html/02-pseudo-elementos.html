@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            border: 1px solid black;
+            height: 100px;
+            margin: 40px;
+            width:  400px;
+        }
+
+        h1{
+            font-size: 1.2em;
+            text-align: center;
+            background-color: crimson;
+            color: white;
+            left: -10px;
+            padding: 5px 0;
+            position: relative;
+            width: 420px;
+        }
+
+        h1::before{
+            border-color: transparent rgba(220, 20, 60, 0.575) rgba(220, 20, 60, 0.575) transparent;
+            border-style: solid;
+            border-width: 5px;
+            content: "";
+            left: 0;
+            position: absolute;
+            top: -10px;
+        }
+
+        h1::after{
+            border-color: transparent transparent rgba(190, 220, 20, 0.575) rgba(190, 220, 20, 0.575) ;
+            border-style: solid;
+            border-width: 5px;
+            content: "";
+            right: 0;
+            position: absolute;
+            top: -10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Antes do HTML5 faziamos alguns ajustes técnicos, como exemplo um SPAN para incluir uma imagem ou uma código CSS para estilizar -->
+    <div class="button">
+        <a href="">Clique aqui</a>
+        <span></span>
+    </div>
+    <section>
+        <h1>Um exemplo de pseudo elemento</h1>
+    </section>
+
+
+</body>
+</html>
