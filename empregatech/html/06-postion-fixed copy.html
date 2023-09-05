@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Relative</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: black;
+        }
+        div {
+            background-color: #f90;
+            width: 300px;
+            height: 1500px;
+            position: relative;
+        }
+        /* O elemento que usa o ABSOLUTE o seu espaço deixa de existir */
+        h1 {
+            background-color: #eee;
+            position: fixed;
+            top: 0px;
+            left: 20px;
+            right: 20px;
+            outline: 1px solid#444;
+        }
+        /* H2 está como Static - não podendo ser posicionado */
+        h2 {
+            position: fixed;
+            outline: 1px solid#f90;
+            background-color: #444;
+            bottom: 0px;
+            left: 20px;
+            right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Static é o valor default de todo elemento HTML, segue o fluxo comum da página -->
+
+    <!-- Relative aceita valores como TOP, BOTTOM, LEFT, RIGHT -->
+
+    <div>
+        <h1>Sou um H1</h1>
+        <h2>Sou um H2</h2>
+    </div>
+
+    <div><!-- DIV é o elemento pai de H1, P e SPAN -->
+        <h1>
+            <span></span>
+        </h1>
+
+        <p></p>
+    </div>
+</body>
+
+</html>
