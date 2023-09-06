@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        ul {
+            height: 35px;
+            list-style: none;
+            padding: 0;
+            width: 210px;
+            background-color: grey;
+            color: white;
+            border: 1px solid rgba(0, 0, 0, 0.3);
+        }
+
+        li {
+            float: left;
+            width: 50px;
+            line-height: 35px;
+            font-size: 0.9em;
+            text-align: center;
+            border-left: 1px solid rgba(255, 255, 255, 0.3);
+            border-right: 1px solid rgba(0, 0, 0, 0.3);
+        }
+
+        li:first-child {
+            border-left: none;
+        }
+
+        li:last-child {
+            border-right: none;
+        }
+
+        div {
+            width: 220px;
+            font-weight: bold;
+            height: 50px;
+            line-height: 25px;
+            margin-bottom: 10px;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .blue {
+            background-image: linear-gradient( #4377FA, #0537B7);
+        }
+
+        .azul-reverso {
+            background-image: linear-gradient( #0537B7, #4377FA);
+        }
+
+        .omg-pink{
+            background-image: linear-gradient(to top right, #FC0050, #f3bbcc);
+        }
+
+        .stops{
+            background-image: linear-gradient(to bottom,#FC0050 20%, #F5B951 50%, #F2a31C 70%);
+        }
+
+        .nav{
+            background-color: #b9522d;
+            height: 30px;
+            list-style: none;
+            padding: 0;
+            width: 215px;
+        }
+
+        .nav li{
+            float: left;
+            font-weight: bold;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            width: 70px;
+            
+        }
+
+        .nav a{
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav .current{
+            background-color: #a64a28;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>Um</li>
+        <li>Dois</li>
+        <li>Três</li>
+        <li>Quatro</li>
+    </ul>
+
+    <div class="blue">
+        Gradiente azul usando 2 tons similares
+    </div>
+
+    <div class="azul-reverso">
+        Uma versão com o mesmo gradiente, só que invertido
+    </div>
+
+    <div class="omg-pink">
+        Combinando "top" e "right" para a direção do gradiente
+    </div>
+
+    <div class="stops">
+        Utilizando posições específicos para as cores.
+    </div>
+
+    <ul class="nav">
+        <!-- atalho li*3>a -->
+        <li><a href="#">Home</a></li>
+        <li class="current"><a href="#">Contato</a></li>
+        <li><a href="#">Sobre</a></li>
+    </ul>
+</body>
+
+</html>
